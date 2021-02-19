@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get Certificate</title>
+    <link rel="stylesheet" href={% static 'main.css' %}>
+    
+</head>
+<body>
+    <h1 style="text-align: center;">Hello World</h1>
+    <div style="display: flex;justify-content: center;align-items: center;">
+        <input class="ip" id="roll_no" placeholder="Enter Your Roll No" type="number">
+        <div class="btn" id="search" >Search</div>
+    </div>
+    {% if error %}
+        <h1 style="color: red;text-align: center;">{{ error }}</h1>
+    {% endif %}
+    {% if files %}
+        <div style="display: flex;flex-direction: column;justify-content: center;">
+            <h1 style="text-align: center;">Roll No - {{ files.roll_no }}</h1>
+            <div style="width: 80vw;display: flex;justify-content: center;margin:auto;">
+                <img src="{{files.certificate.url}}" style="max-width: 100%;border: 1px solid black;">
+            </div>
+            
+        </div>
+    
+    {% endif %}
+    <script type="text/javascript" src={% static 'main.js' %}></script>
+</body>
+</html>

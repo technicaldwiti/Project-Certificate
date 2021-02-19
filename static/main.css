@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    padding: 0;
+    /* background-color: aqua;
+    border: 1px solid red; */
+}
+.ip{
+    font-size: large;
+    padding: 10px;
+    border-radius: 3px;
+    margin: 1vw;
+    /* size: 50; */
+    /* border: none; */
+    
+}
+.btn{
+    /* height: 50vh; */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(46, 46, 206);
+    /* border: 1px solid red; */
+    padding: 0 20px;
+    font-weight: bolder;
+    font-size: large;
+    border-radius: 5%;
+    cursor: pointer;
+    color: white;
+}
